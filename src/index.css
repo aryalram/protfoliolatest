@@ -1,0 +1,38 @@
+/* Responsive full-width sticky navbar */
+.navbar {
+  width: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  background-color: #4ecdf8;
+  z-index: 999;
+  padding: 0.5rem 0;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
+  height: 100px;
+}
+
+/* Flex container for links */
+.nav-links {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap; /* Allows wrap on smaller screens */
+  gap: 2rem;
+}
+
+/* Link styles */
+.nav-links li a {
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+  font-size: 1.1rem;
+  padding: 0.5rem 1rem;
+  border-radius: 6px;
+  transition: background-color 0.3s;
+}
+
+.nav-links li a:hover {
+  background-color: #370aa1;
+}

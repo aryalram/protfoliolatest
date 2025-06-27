@@ -1,0 +1,127 @@
+/* Make the entire app container fill the screen */
+body,
+html,
+#root {
+  height: 100%;
+  margin: 0;
+  font-family: Arial, sans-serif;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.app-wrapper {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+/* Header and Footer fixed height */
+header {
+  height: 100px;
+  background-color: #f0f0f0;
+}
+
+footer {
+  height: 150px;
+  background-color: #f0f0f0;
+}
+
+/* Main page container between header and footer */
+.page-content {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  min-height: calc(100vh - 250px); /* header + footer = 100px + 150px */
+  padding: 0;
+  background-color: #fff;
+}
+
+/* Individual page sections (like services, skills) */
+.section {
+  flex-grow: 1;
+  padding: 2rem 4rem;
+}
+
+/* Flex container for hero section */
+.hero-section {
+  display: flex;
+  height: calc(100vh - 250px); /* Full height minus header and footer */
+  background-color: #ffffff;
+  overflow: hidden;
+}
+
+/* Move image to the left */
+.hero-image {
+  flex: 0 0 auto;
+  height: 100%;
+}
+
+.hero-image img {
+  height: 100%;
+  width: auto;
+  object-fit: cover;
+  border-radius: 0 12px 12px 0; /* Round right corners if you want */
+  box-shadow: 2px 0 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Right side text */
+.hero-text {
+  flex: 1;
+  padding: 3rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.hero-text h1 {
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+  align-items: center;
+}
+
+.hero-text p {
+  font-size: 1.2rem;
+  color: #555;
+  align-items: center;
+}
+
+.skills-container {
+  display: flex;
+  justify-content: center; /* centers horizontally */
+  align-items: center; /* centers vertically */
+  min-height: calc(100vh - 250px); /* to respect header + footer height */
+  background-color: #fff;
+  padding: 2rem;
+  text-align: center; /* optional */
+  text-decoration: none;
+}
+.skills-container ul li {
+  text-decoration: none;
+}
+
+.skills-container .section {
+  max-width: 700px; /* optional: keep content readable */
+}
+.section ul {
+  list-style-type: none; /* Removes bullets */
+  padding: 0; /* Removes default indentation */
+  align-items: baseline;
+}
+
+/* Education */
+.education-list {
+  list-style-type: square;
+  padding-left: 1.5rem;
+  margin-top: 1.5rem;
+  line-height: 1.8;
+}
+
+.education-list li {
+  margin-bottom: 1.2rem;
+  font-size: 1.1rem;
+}

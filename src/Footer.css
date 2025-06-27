@@ -1,0 +1,9 @@
+.footer-container {
+  text-align: center;
+  padding: 1rem;
+  background-color: #4cf3b8;
+  color: rgb(55, 10, 202);
+  width: 100%;
+  height: 155px; /* ✅ fixed height */
+  box-sizing: border-box; /* ensures padding doesn't overflow */
+}
